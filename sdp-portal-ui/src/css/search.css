@@ -1,0 +1,29 @@
+.page-container-search{
+    padding: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:12px;
+}
+
+.page-container-search .result{
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    background: #ececec
+}
+
+.page-container-search .result h3{
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+.page-container-search .result h3 a{
+    color: #333;
+    text-decoration: none;
+}
+
+.page-container-search .result h3 a:hover{
+    text-decoration: underline
+}
+
+.page-container-search .contents-extended{
+    padding: 0;
+}

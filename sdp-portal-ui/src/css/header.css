@@ -1,0 +1,149 @@
+header{
+    background: #000;
+    width: 100%;
+    padding: 20px 30px;
+    color: rgba(255,255,255,.8);
+    box-shadow: 0 7px 9px #ccc;
+}
+
+header h1{
+    font-size: 41px;
+    font-weight: 800;
+    color: rgba(255,255,255,.8);
+    margin: 0;
+    padding: 0;
+    float: left
+}
+
+header .search-box{
+    float: right;
+    width: 75%;
+}
+
+header .search-box input{
+    width: 90%;
+    padding: 9px 10px;
+    border: 1px solid #ccc;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+header .search-box button{
+    padding: 6px 10px;
+    font-size: 22px;
+    border: none;
+    background: #febd69;
+    color: #2f2f2f;
+    border-radius: 5px;
+    position: relative;
+    top: 2px;
+    left: -6px;
+    font-family: arial;
+    text-shadow: 1px 1px 1px #ccc;
+    cursor: pointer;
+}
+
+header .top-nav{
+    clear:both;
+    padding-top: 10px
+}
+
+.flyoutNav{
+    display: inline-block;
+    position: relative;
+}
+
+.flyoutNav a{
+    color: rgba(255,255,255,.8);
+    text-decoration: none
+}
+
+.flyoutNav a:hover{
+    text-decoration: underline
+}
+
+.flyoutNav > ul{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    border-bottom-left-radius: 5px;
+    
+}
+
+.flyoutNav ul{
+    display: none;  /********** */
+    background: rgba(0,0,0);
+    color: #000;
+    list-style-type: none;
+    z-index: 22;
+    height: 400px;
+}
+
+.flyoutNav ul li{
+    cursor: pointer;
+    padding: 8px 10px;
+    width: 170px;
+    border-bottom: 1px dashed rgba(255,255,255,.5);
+}
+
+.flyoutNav:hover > ul{
+    display: block;
+    margin: 0;
+    padding: 0
+}
+
+.flyoutNav:hover > ul > li .expand-menu{
+    display: none;
+}
+
+.flyoutNav:hover > ul > li:hover .expand-menu{
+    display: block;
+    position: absolute;
+    left: 190px;
+    top: 0;
+    width: 400px;
+    height: 400px;
+    background-size: cover;
+    background-position: 91px 130px;
+    background-repeat: no-repeat;
+    background-color: #000;
+}
+
+.flyoutNav li  ul{
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    background: transparent
+}
+
+.flyoutNav:hover > ul > li:hover > .expand-menu ul{ 
+    display:block;
+}
+
+.flyoutNav .stamp{
+    border: 1px solid rgba(255,255,255,.8);
+    color: #FF9800;
+    padding: 10px;
+    display:inline-block;
+    cursor: pointer
+}
+
+.flat-nav{
+    display: inline-block;
+    margin: 0 0 0 20px;
+    padding: 0;
+}
+
+.flat-nav li{
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.flat-nav li a{
+    color: rgba(255,255,255,.8);
+    text-decoration: none
+}
+
+.flat-nav li a:hover{
+    text-decoration: underline
+}
