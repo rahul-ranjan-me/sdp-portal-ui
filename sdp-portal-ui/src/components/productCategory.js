@@ -9,11 +9,15 @@ export default class ProductCategory extends Component{
     }
 
     createProductsList(product, key){
+        const productImage = product.image ? product.image.url : undefined
         return(
-            <li key={key}>
-                {product.image ? <img src={product.image.url} /> : undefined }
-                <h3><Link to={`/products/${product._id}`}>{product.title}</Link></h3>
-                <p>{product.brief}</p>
+            <li key={key} style={{backgroundImage:`url(${productImage})`}}>
+                <div className="content">
+                    <div className="inner-content">
+                        <h3><Link to={`/products/${product._id}`}>{product.title}</Link></h3>
+                        <p>{product.brief}</p>
+                    </div>
+                </div>
             </li>
         )
     }

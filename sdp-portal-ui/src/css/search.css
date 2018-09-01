@@ -10,6 +10,17 @@
     background: #ececec
 }
 
+.page-container-search .result:first-child{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.page-container-search .result:last-child{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom: none;
+}
+
 .page-container-search .result h3{
     margin: 0 0 10px;
     padding: 0;

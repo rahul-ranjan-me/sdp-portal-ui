@@ -1,5 +1,5 @@
 .product-category{
-    padding: 15px;
+    padding: 50px;
     border-bottom: 1px dotted #333;
     /* clear: both; */
     float: left;
@@ -12,8 +12,8 @@
 }
 
 .product-category h2 a{
-    font-size: 15px; 
-    color: #333;
+    font-size: 20px; 
+    color: #2196f3;
     text-decoration: none
 }
 
@@ -21,56 +21,66 @@
     text-decoration: underline
 }
 
-.product-category .products{
+.products{
     width: 100%;
     display: block;
     clear: both
 }
 
-.product-category .products ul{
+.products ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-.product-category .products li{
-    width: 300px;
+.products li{
+    width: 330px;
     float: left;
     -webkit-box-shadow: 1px 1px 1px #ccc;
     box-shadow: 0px 0px 8px #ccc;
-    padding: 15px;
     height: 300px;
+    padding: 0;
     margin-right: 30px;
     border-radius: 5px;
-    background: rgba(226,226,226,1);
-    background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(250,247,250,1) 21%, rgba(250,237,250,1) 51%, rgba(254,254,254,1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(226,226,226,1)), color-stop(21%, rgba(250,247,250,1)), color-stop(51%, rgba(250,237,250,1)), color-stop(100%, rgba(254,254,254,1)));
-    background: -webkit-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(250,247,250,1) 21%, rgba(250,237,250,1) 51%, rgba(254,254,254,1) 100%);
-    background: -o-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(250,247,250,1) 21%, rgba(250,237,250,1) 51%, rgba(254,254,254,1) 100%);
-    background: -ms-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(250,247,250,1) 21%, rgba(250,237,250,1) 51%, rgba(254,254,254,1) 100%);
+    background-color: #ececec;
+    background-size: 100% 100%;
+    position: relative;
 }
 
-.product-category .products li:last-child{
+.products li .content{
+    width: 100%;
+    min-height: 150px;
+    position: absolute;
+    bottom: 0;
+    background: rgba(255, 255, 255, .4);
+}
+
+.products li .inner-content{
+    padding: 15px;
+}
+
+.products li:last-child{
     margin-right: 0
 }
 
-.product-category .products h3{
+.products h3{
     margin: 0 0 10px;
-    padding: 0
+    padding: 0;
+    font-size: 14px;
 }
 
-.product-category .products img{
+.products img{
     width: 100%;
     height: 150px;
     margin-bottom: 10px
 }
 
-.product-category .products h3 a{
-    font-size: 13px;
+.products h3 a{
+    font-size: 15px;
     color: #333;
     text-decoration: none
 }
 
-.product-category .products h3 a:hover{
+.products h3 a:hover{
     text-decoration: underline
 }

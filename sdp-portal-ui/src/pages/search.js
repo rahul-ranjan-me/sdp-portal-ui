@@ -16,7 +16,7 @@ export default class Home extends Component{
     }
 
     componentDidMount(){
-        axios.get(`${config.apiURL}productsSearch/${this.props.location.search}`)
+        axios.get(`${config.apiURL}search/${this.props.location.search}`)
             .then((data) => {
                 this.setState({
                     results: data.data
@@ -24,13 +24,16 @@ export default class Home extends Component{
             })
     }
 
-    printResults(data){
-        return(
-            <div className="result">
-                <h3><Link to={`/products/${data._id}`}>{data.title}</Link></h3>
-                <div className="contents-extended" dangerouslySetInnerHTML={{__html: data.content.brief}}></div>
-            </div>
-        )
+    printResults(resultCategory){
+        return this.state.results[resultCategory].map((data) => {
+            const linkTo = resultCategory === 'developerResult' ? `/devCategory/${data.categories[0]}`  : `/products/${data._id}`
+            return(
+                <div className="result" key={data._id}>
+                    <h3><Link to={linkTo}>{data.title}</Link></h3>
+                    <div className="contents-extended" dangerouslySetInnerHTML={{__html: data.content.brief}}></div>
+                </div>
+            )
+        })
     }
 
     render(){
@@ -38,9 +41,9 @@ export default class Home extends Component{
         return(
             [
                 <Header />,
-                <div class="page-container-search">
+                <div className="page-container-search">
                     <h2>Search results</h2>
-                    <div>{results.length ? results.map(this.printResults.bind(this)) : 'No results found'}</div>
+                    <div>{Object.keys(results).length ? Object.keys(results).map(this.printResults.bind(this)) : 'No results found'}</div>
                 </div>
             ]
         )
